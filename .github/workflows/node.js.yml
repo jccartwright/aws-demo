@@ -30,10 +30,10 @@ jobs:
         npm run build 
         npm test --if-present
         
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: dist
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: dist
       
 #     - run: git config --global user.name "GitHub Actions Bot"
 #     - run: git config --global user.email "john.c.cartwright@comcast.net"
