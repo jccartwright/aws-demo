@@ -31,8 +31,8 @@ jobs:
     - run: npm test --if-present
 
     - name: setup git config
-      run: |
-          git config user.name "GitHub Actions Bot"
-          git config user.email "john.c.cartwright@comcast.net"
-    - name: commit
+    - run: git config --global user.name "GitHub Actions Bot"
+    - run: git config --global user.email "john.c.cartwright@comcast.net"
+    - run: git config --global user.name "Your Name"
+    - name: commit to GH Pages
       run: sh deploy-to-gh-pages.sh
