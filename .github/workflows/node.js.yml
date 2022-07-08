@@ -35,4 +35,4 @@ jobs:
     - run: npm test --if-present
     - run: git config --global user.name "GitHub Actions Bot"
     - run: git config --global user.email "john.c.cartwright@comcast.net"
-    - run: sh deploy-to-gh-pages.sh
+#     - run: sh deploy-to-gh-pages.sh
