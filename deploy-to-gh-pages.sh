@@ -6,7 +6,7 @@ set -e
 # build
 # npm run build
 
-ls -al
+ls -alR .github
 # navigate into the build output directory
 cd dist
 pwd
