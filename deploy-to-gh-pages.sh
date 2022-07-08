@@ -12,9 +12,6 @@ cd dist
 # if you are deploying to a custom domain
 # echo 'www.example.com' > CNAME
 
-git config init.defaultBranch main
-git config user.email "john.c.cartwright@comcast.net"
-git config user.name "GitHub Action"
 git init
 git checkout -b main
 git add -A
@@ -26,4 +23,4 @@ git commit -m 'deploy'
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
 git push -f git@github.com:jccartwright/aws-demo.git main:gh-pages
 
-cd -
+cd ..
