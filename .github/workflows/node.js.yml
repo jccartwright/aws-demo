@@ -27,6 +27,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        name: id_rsa
     - run: npm ci
     - run: npm run build 
     - run: npm test --if-present
