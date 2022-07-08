@@ -9,6 +9,7 @@ set -e
 # navigate into the build output directory
 cd dist
 pwd
+ls -al ../.github/workflows/secrets/
 
 # if you are deploying to a custom domain
 # echo 'www.example.com' > CNAME
@@ -22,7 +23,6 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git main
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-# git push -f git@github.com:jccartwright/aws-demo.git main:gh-pages
-git push -f https://github.com/jccartwright/aws-demo.git main:gh-pages
+git push -f git@github.com:jccartwright/aws-demo.git main:gh-pages
 
 cd -
