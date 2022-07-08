@@ -29,4 +29,10 @@ jobs:
     - run: npm ci
     - run: npm run build 
     - run: npm test --if-present
-    - run: sh deploy-to-gh-pages.sh
+
+    - name: setup git config
+      run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "john.c.cartwright@comcast.net"
+    - name: commit
+      run: sh deploy-to-gh-pages.sh
