@@ -27,11 +27,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        name: id_rsa
+#         key: ${{ secrets.SSH_PRIVATE_KEY }}
+#         name: id_rsa
     - run: npm ci
     - run: npm run build 
     - run: npm test --if-present
     - run: git config --global user.name "GitHub Actions Bot"
     - run: git config --global user.email "john.c.cartwright@comcast.net"
-    - run: sh deploy-to-gh-pages.sh
+    # - run: sh deploy-to-gh-pages.sh
