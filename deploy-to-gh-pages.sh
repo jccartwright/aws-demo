@@ -6,10 +6,11 @@ set -e
 # build
 # npm run build
 
+ls -al
 # navigate into the build output directory
 cd dist
 pwd
-ls -al ../.github/workflows/secrets/
+
 
 # if you are deploying to a custom domain
 # echo 'www.example.com' > CNAME
