@@ -9,7 +9,7 @@
     "test:watch": "vitest",
     "test:ui": "vitest --ui",
     "test": "vitest run",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
     "build:aws": "tsc && vite build --config vite.config.aws.js",
     "build:gh":  "tsc && vite build --config vite.config.gh.js"
   },
