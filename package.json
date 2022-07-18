@@ -11,8 +11,7 @@
     "test": "vitest run",
     "test:coverage": "vitest run --coverage"
     "build:aws": "tsc && vite build --config vite.config.aws.js",
-    "build:gh":  "tsc && vite build --config vite.config.gh.js",
-    "preview": "vite preview"
+    "build:gh":  "tsc && vite build --config vite.config.gh.js"
   },
   "dependencies": {
     "react": "^18.0.0",
