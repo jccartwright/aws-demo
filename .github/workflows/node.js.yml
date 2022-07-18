@@ -6,9 +6,8 @@ name: Vite Production Build CI
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
+permissions:
+  contents: write
 jobs:
   build:
 
@@ -26,6 +25,16 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
-    - run: npm run build 
-    - run: npm test --if-present
+    - run: |
+        npm ci
+        npm run build:gh 
+        npm test --if-present
+        
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: dist
+      
+#     - run: git config --global user.name "GitHub Actions Bot"
+#     - run: git config --global user.email "john.c.cartwright@comcast.net"
+#     - run: sh deploy-to-gh-pages.sh
